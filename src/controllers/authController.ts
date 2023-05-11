@@ -63,6 +63,10 @@ const verifyAccount = async (req:Request,res:Response) =>{
    })
 }
 
+const loginAccount = (req:Request,res:Response)=>{
+
+}
+
 const googleAuthentication = () =>{
     //passport.authenticate('google',{
     //    scope:['email','profile']

@@ -1,6 +1,7 @@
 import express from 'express'
 import { createAccount, googleAuthentication, googleCallback, verifyAccount } from '../controllers/authController';
 import { authentication } from '../middlewares/authentication';
+
 const router = express.Router();
 
 

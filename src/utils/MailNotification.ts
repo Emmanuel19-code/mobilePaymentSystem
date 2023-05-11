@@ -7,6 +7,14 @@ interface OneTime {
   title:string
 }
 
+
+interface received{
+  name:string,
+  email:string,
+  amount:string,
+  sender:string
+}
+
 export const sendOneTimePassword = async ({
   name,
   email,
@@ -41,5 +49,18 @@ export const ResetPasswordToken = ({
    })
 }
 
-
+export const SendMoneyReceived =({
+   name,
+   email,
+   amount,
+   sender
+}:received)=>{
+   return sendEmail({
+     to:email,
+     subject:"Money Received",
+     html:`<h4>Hello, ${name}</h4>
+      You received an amount of ${amount} from ${sender}
+     `
+   })
+}
  

@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import { connection } from "./db/connection";
 import { config } from "./config/config";
 import authRoute from "./routes/authRoute"
+import profileRoute from "./routes/profileRoute"
 import passport from "passport";
 import cors from 'cors'
 
@@ -15,7 +16,7 @@ app.use(cors())
 
 
 app.use("/",authRoute)
-
+app.use("/profile",profileRoute)
 
 
 
